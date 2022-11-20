@@ -1,0 +1,45 @@
+{
+  "name": "@iamxiyang/gclone",
+  "version": "0.0.1",
+  "description": "代替 git clone 来简化某些操作",
+  "bin": {
+    "gclone": "./bin/index.mjs",
+    "gclone-config": "./bin/config.mjs"
+  },
+  "scripts": {
+    "release": "bumpp --commit --push --tag"
+  },
+  "keywords": [
+    "git",
+    "gitclone"
+  ],
+  "author": "hexiyang",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iamxiyang/gclone.git"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/iamxiyang/gclone/issues"
+  },
+  "homepage": "https://github.com/iamxiyang/gclone#readme",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "dependencies": {
+    "chalk": "^5.1.2",
+    "json5": "^2.2.1",
+    "update-notifier": "^6.0.2",
+    "zx": "^7.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.9",
+    "@types/update-notifier": "^6.0.1",
+    "bumpp": "^8.2.1",
+    "typescript": "^4.9.3"
+  }
+}

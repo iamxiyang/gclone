@@ -1,0 +1,30 @@
+{
+  // 默认生效规则
+  ".": {
+    "git": {
+      "name": "", // Git作者
+      "email": "" // Git作者email
+    },
+    "node": {
+      "install": false, // 克隆完成自动安装依赖，需要项目中存在package.json
+      "package": "npm" // npm/pnpm/yarn，留空则自动分析项目适合的包管理工具
+    },
+    "editor": {
+      "vscode": false // 克隆完成自动通过vscode打开
+    }
+  },
+  // 只有git仓库地址包含github.com才生效
+  "github.com": {
+    "git": {
+      "name": "",
+      "email": ""
+    },
+    "node": {
+      "install": true,
+      "package": ""
+    },
+    "editor": {
+      "vscode": false
+    }
+  }
+}
