@@ -42,10 +42,10 @@ cd(gitProjectPath)
 
 // 执行git config
 if (config?.git?.email) {
-  await $`git config --local user.email "${config?.git?.email}"`
+  await $`git config --local user.email ${config?.git?.email}`
 }
 if (config?.git?.name) {
-  await $`git config --local user.name "${config?.git?.name}" `
+  await $`git config --local user.name ${config?.git?.name}`
 }
 
 const finPackageManager = async () => {
