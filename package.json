@@ -1,6 +1,6 @@
 {
   "name": "@iamxiyang/gclone",
-  "version": "0.0.3",
+  "version": "1.0.0",
   "description": "代替 git clone 来简化某些操作",
   "bin": {
     "gclone": "./bin/index.mjs",
