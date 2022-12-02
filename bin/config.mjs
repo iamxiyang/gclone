@@ -4,6 +4,8 @@ import path from 'path'
 import { fileURLToPath } from 'url'
 import JSON5 from 'json5'
 
+// 解决zx在windows上多出符号问题
+$.quote = (v) => v
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 // 配置文件路径
@@ -12,7 +14,7 @@ const CONFIG_PATH = path.join(os.homedir() || '~/', CONFIG_FILE_NAME)
 
 // 初始化配置
 export const initConfig = async () => {
-  const defaultConfig = await fs.readFile(path.join(__dirname + '/../', CONFIG_FILE_NAME))
+  const defaultConfig = await fs.readFile(path.join(`${__dirname}${path.sep}..${path.sep}`, CONFIG_FILE_NAME))
   await fs.outputFile(CONFIG_PATH, defaultConfig)
 }
 

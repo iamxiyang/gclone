@@ -34,12 +34,15 @@
     "chalk": "^5.1.2",
     "json5": "^2.2.1",
     "update-notifier": "^6.0.2",
-    "zx": "^7.1.1"
+    "zx": "7.0.7"
   },
   "devDependencies": {
-    "@types/node": "^18.11.9",
+    "@types/node": "^18.11.10",
     "@types/update-notifier": "^6.0.1",
     "bumpp": "^8.2.1",
     "typescript": "^4.9.3"
+  },
+  "peerDependencies": {
+    "@types/node": "*"
   }
 }

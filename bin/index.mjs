@@ -5,6 +5,9 @@ import { fileURLToPath } from 'url'
 import updateNotifier from 'update-notifier'
 import { readConfig } from './config.mjs'
 
+// 解决zx在windows上多出符号问题
+$.quote = (v) => v
+
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const pkg = fs.readJSONSync(__dirname + '/../package.json')
 
