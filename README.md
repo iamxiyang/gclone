@@ -36,38 +36,38 @@ gclone-config
 
 Example configuration file:
 
-```json
+```json5
 {
   // Default configuration, applicable to all cases
-  ".": {
-    "git": {
-      "name": "", // Default Git author
-      "email": "" // Default Git author email
+  '.': {
+    git: {
+      name: '', // Default Git author
+      email: '', // Default Git author email
     },
-    "node": {
-      "install": false, // Whether to automatically install dependencies
-      "package": "npm" // Package management tool to use when a package.json is present in the project; leave empty to auto-detect
+    node: {
+      install: false, // Whether to automatically install dependencies
+      package: 'npm', // Package management tool to use when a package.json is present in the project; leave empty to auto-detect
     },
-    "editor": {
-      "vscode": true // Whether to automatically open the project with VS Code
-    }
+    editor: {
+      vscode: true, // Whether to automatically open the project with VS Code
+    },
   },
   // Configuration applicable only to GitHub addresses
-  "github.com": {
-    "git": {
-      "name": "",
-      "email": ""
+  'github.com': {
+    git: {
+      name: '',
+      email: '',
     },
-    "node": {
-      "install": false,
-      "package": ""
+    node: {
+      install: false,
+      package: '',
     },
-    "editor": {
-      "vscode": false
-    }
+    editor: {
+      vscode: false,
+    },
   },
   // Configuration applicable only to xx.com addresses
-  "xx.com": {}
+  'xx.com': {},
 }
 ```
 

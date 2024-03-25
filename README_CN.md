@@ -36,38 +36,38 @@ gclone-config
 
 配置文件示例：
 
-```json
+```json5
 {
   // 默认配置，适用于所有情况
-  ".": {
-    "git": {
-      "name": "", // 默认 Git 作者
-      "email": "" // 默认 Git 作者邮箱
+  '.': {
+    git: {
+      name: '', // 默认 Git 作者
+      email: '', // 默认 Git 作者邮箱
     },
-    "node": {
-      "install": false, // 是否自动安装依赖
-      "package": "npm" // 项目中存在 package.json 时使用的包管理工具，留空则自动检测
+    node: {
+      install: false, // 是否自动安装依赖
+      package: 'npm', // 项目中存在 package.json 时使用的包管理工具，留空则自动检测
     },
-    "editor": {
-      "vscode": true // 是否自动使用 VS Code 打开项目
-    }
+    editor: {
+      vscode: true, // 是否自动使用 VS Code 打开项目
+    },
   },
   // 仅在 GitHub 地址下生效的配置
-  "github.com": {
-    "git": {
-      "name": "",
-      "email": ""
+  'github.com': {
+    git: {
+      name: '',
+      email: '',
     },
-    "node": {
-      "install": false,
-      "package": ""
+    node: {
+      install: false,
+      package: '',
     },
-    "editor": {
-      "vscode": false
-    }
+    editor: {
+      vscode: false,
+    },
   },
   // 仅在 xx.com 地址下生效的配置
-  "xx.com": {}
+  'xx.com': {},
 }
 ```
 
