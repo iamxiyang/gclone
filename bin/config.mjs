@@ -1,11 +1,13 @@
 #!/usr/bin/env node
-import 'zx/globals'
 import path from 'path'
+import os from 'os'
+import fs from 'fs-extra'
 import { fileURLToPath } from 'url'
 import JSON5 from 'json5'
+import shelljs from 'shelljs'
 
-// 解决zx在windows上多出符号问题
-$.quote = (v) => v
+import { getMessage } from './language.mjs'
+
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 // 配置文件路径
@@ -25,8 +27,8 @@ export const openConfig = async () => {
   } catch (err) {
     await initConfig()
   }
-  await $`code ${CONFIG_PATH}`
-  echo(`配置文件路径 ${CONFIG_PATH} ，如果没有自动打开，请手动打开编辑`)
+  shelljs.exec(`code ${CONFIG_PATH}`)
+  console.log(getMessage('configPathManualOpen', CONFIG_PATH))
 }
 
 if (process.argv[1].endsWith('config.mjs')) {
@@ -42,7 +44,7 @@ export const readConfig = async () => {
   } catch (err) {
     console.log(err)
     await initConfig()
-    console.log(`缺少配置，请完成配置后使用。如有问题请参考使用文档`)
+    console.log(getMessage('missingConfigPleaseCompleteBeforeUse'))
     process.exit()
   }
 }
